@@ -4,7 +4,7 @@ Page({
 			url: '../detail/detail'
 		});
 	},
-	navigateToCart: function () {
+	addCart: function () {
 		wx.showToast({
 			title: '已加入购物车',
 			icon: 'success'

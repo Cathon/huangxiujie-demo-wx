@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "bindtap与catchtap区别",
+    "navigationBarTitleText": "商品列表",
     "navigationBarTextStyle":"black"
   }
 }
