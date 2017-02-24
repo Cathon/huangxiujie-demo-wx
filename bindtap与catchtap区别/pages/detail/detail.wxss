@@ -1,0 +1,3 @@
+view {
+	color: blue; font-size: 22px;
+}

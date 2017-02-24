@@ -1,0 +1,10 @@
+<view class="item" bindtap="navigateToDetail">
+	<image src="../../images/iPhone.jpg" />
+	<text>iPhone7 128G 深空灰</text>
+	<image src="../../images/icon_cart.png" catchtap="navigateToCart" />
+</view>
+<view class="item" bindtap="navigateToDetail">
+	<image src="../../images/huawei.jpg" />
+	<text>华为荣耀5X</text>
+	<image src="../../images/icon_cart.png" catchtap="navigateToCart" />
+</view>
