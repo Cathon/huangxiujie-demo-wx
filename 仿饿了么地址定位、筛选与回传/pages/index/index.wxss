@@ -1,0 +1,18 @@
+/**index.wxss**/
+view {
+	display: flex;
+	justify-content: flex-start;
+	padding: 20px;
+	background: #009cf9;
+	align-items: center;
+}
+
+image {
+	width: 20px;
+	height: 20px;
+}
+
+text {
+	font-size: 12px;
+	color: white;
+}

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view>
+	<image src="../../images/location.png" />
+	<text>{{location}}</text>
+</view>

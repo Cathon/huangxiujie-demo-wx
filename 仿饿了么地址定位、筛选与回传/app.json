@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#009cf9",
+    "navigationBarTitleText": "仿饿了么地址选择",
+    "navigationBarTextStyle":"white"
+  }
+}
