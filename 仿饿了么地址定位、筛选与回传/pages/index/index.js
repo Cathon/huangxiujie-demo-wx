@@ -14,7 +14,7 @@ var that;
 
 Page({
     data: {
-        location: '正在请求地址...'
+        address: '正在请求地址...'
     },
     onLoad: function () {
         that = this;
@@ -28,8 +28,10 @@ Page({
             poi_options: 'policy=2',
             get_poi: 1,
             success: function(res) {
+                // console.log(JSON.stringify(res));
+                console.log(res);
                 that.setData({
-                    location: res.result.address
+                    address: res.result.formatted_addresses.recommend
                 });
             },
             fail: function(res) {
@@ -42,12 +44,12 @@ Page({
     },
     navigateToSearch: function () {
         wx.navigateTo({
-            url: '../search/search?location=' + that.data.location
+            url: '../search/search'
         });
     },
     getAddress: function (address) {
         that.setData({
-            location: address
+            address: address
         });
     }
 })

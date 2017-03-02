@@ -15,4 +15,5 @@ image {
 text {
 	font-size: 12px;
 	color: white;
+	width: 100%;
 }

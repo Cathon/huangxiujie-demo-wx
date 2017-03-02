@@ -10,15 +10,31 @@
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
 var WxNotificationCenter = require('../../utils/WxNotificationCenter.js');
 var that;
+var qqmapsdk;
 Page({
     onLoad: function (options) {
         that = this;
-        // 从首页传入当前地址名称
-        var location = options.location;
-        console.log(location);
-        // 渲染给页面
-        that.setData({
-            location: location
+        qqmapsdk = new QQMapWX({
+            key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
+        });
+        // 调用接口
+        qqmapsdk.reverseGeocoder({
+            poi_options: 'policy=2',
+            get_poi: 1,
+            success: function(res) {
+            // 渲染给页面
+                that.setData({
+                    address: res.result.formatted_addresses.recommend,
+                    result: res.result.pois,
+                    city: res.result.address_component.city
+                });
+            },
+            fail: function(res) {
+        //         console.log(res);
+            },
+            complete: function(res) {
+        //         console.log(res);
+            }
         });
     },
     keywordTyping: function (e) {
@@ -26,11 +42,9 @@ Page({
         var keyword = e.detail.value;
         console.log('keyword' + keyword);
         // 向腾讯地图接口发送请求
-        var qqmapsdk = new QQMapWX({
-            key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
-        });
         qqmapsdk.getSuggestion({
             keyword: keyword,
+            region: that.data.city,
             success: function (res) {
                 console.log(res);
                 // 保存地址数组
@@ -47,10 +61,9 @@ Page({
         });
     },
     addressTapped: function (e) {
-        var address = e.currentTarget.dataset.address;
-        console.log(address);
+        var title = e.currentTarget.dataset.title;
         // 取出点中的地址，然后使用WxNotification回传给首页
-        WxNotificationCenter.postNotificationName("addressSelectedNotification", address);
+        WxNotificationCenter.postNotificationName("addressSelectedNotification", title);
         wx.navigateBack();
 
     }

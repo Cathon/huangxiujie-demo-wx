@@ -1,5 +1,5 @@
 <!--index.wxml-->
 <view>
 	<image src="../../images/location.png" />
-	<text bindtap="navigateToSearch">{{location}}</text>
+	<text bindtap="navigateToSearch">{{address}}</text>
 </view>
