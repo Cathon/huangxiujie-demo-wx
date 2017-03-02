@@ -1,0 +1,8 @@
+<view class="searcher">
+	<input type="text" bindinput="keywordTyping" placeholder="搜索商家、商品名称" placeholder-class="placeholder-class" />
+</view>
+<view class="header">当前地址</view>
+<view class="current">
+	<text>{{location}}</text>
+	<image src="../../images/geo.png" />
+</view>

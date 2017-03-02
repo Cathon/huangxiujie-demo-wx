@@ -8,22 +8,21 @@
  * @author 黄秀杰
  */
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
-
+var that;
 Page({
     data: {
         location: '正在请求地址...'
     },
     onLoad: function () {
+        that = this;
         var qqmapsdk = new QQMapWX({
             key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
         });
-                var that = this;
         // 调用接口
         qqmapsdk.reverseGeocoder({
             poi_options: 'policy=2',
             get_poi: 1,
             success: function(res) {
-                console.log(res);
                 that.setData({
                     location: res.result.address
                 });
@@ -34,6 +33,11 @@ Page({
             complete: function(res) {
         //         console.log(res);
             }
+        });
+    },
+    navigateToSearch: function () {
+        wx.navigateTo({
+            url: '../search/search?location=' + that.data.location
         });
     }
 })
