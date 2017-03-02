@@ -7,14 +7,19 @@
  * @link https://my.oschina.net/huangxiujie
  * @author 黄秀杰
  */
+
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
+var WxNotificationCenter = require('../../utils/WxNotificationCenter.js');
 var that;
+
 Page({
     data: {
         location: '正在请求地址...'
     },
     onLoad: function () {
         that = this;
+        // 注册通知
+        WxNotificationCenter.addNotification("addressSelectedNotification",that.getAddress,that)
         var qqmapsdk = new QQMapWX({
             key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
         });
@@ -38,6 +43,11 @@ Page({
     navigateToSearch: function () {
         wx.navigateTo({
             url: '../search/search?location=' + that.data.location
+        });
+    },
+    getAddress: function (address) {
+        that.setData({
+            location: address
         });
     }
 })

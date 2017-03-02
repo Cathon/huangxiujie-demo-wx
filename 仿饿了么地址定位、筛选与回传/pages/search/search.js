@@ -8,6 +8,7 @@
  * @author 黄秀杰
  */
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
+var WxNotificationCenter = require('../../utils/WxNotificationCenter.js');
 var that;
 Page({
     onLoad: function (options) {
@@ -32,6 +33,7 @@ Page({
             keyword: keyword,
             success: function (res) {
                 console.log(res);
+                // 保存地址数组
                 that.setData({
                     result: res.data
                 });
@@ -43,6 +45,13 @@ Page({
                 console.log(res);
             }
         });
+    },
+    addressTapped: function (e) {
+        var address = e.currentTarget.dataset.address;
+        console.log(address);
+        // 取出点中的地址，然后使用WxNotification回传给首页
+        WxNotificationCenter.postNotificationName("addressSelectedNotification", address);
+        wx.navigateBack();
 
     }
 })

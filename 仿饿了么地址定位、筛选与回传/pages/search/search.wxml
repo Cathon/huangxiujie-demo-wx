@@ -8,7 +8,7 @@
 </view>
 <view class="header">搜索地址</view>
 <view class="list">
-	<view class="item" bindtap="addressTapped" wx:for="{{result}}" wx:key="">
+	<view class="item" bindtap="addressTapped" data-address="{{item.address}}" wx:for="{{result}}" wx:key="">
 		<text class="title">{{item.title}}</text>
 		<text class="address">{{item.address}}</text>
 	</view>
