@@ -32,6 +32,9 @@ Page({
             keyword: keyword,
             success: function (res) {
                 console.log(res);
+                that.setData({
+                    result: res.data
+                });
             }, 
             fail: function(res) {
                 console.log(res);

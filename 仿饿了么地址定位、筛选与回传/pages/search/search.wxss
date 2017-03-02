@@ -45,3 +45,25 @@
 .current image:after {
 	content: '重新定位';
 }
+
+/*结果行*/
+.item {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #eee;
+}
+
+.item .title {
+	width: 100%;
+	font-size: 18px;
+	line-height: 30px;
+	color: #333;
+}
+
+.item .address {
+	width: 100%;
+	font-size: 14px;
+	line-height: 24px;
+	color: #666;
+}
