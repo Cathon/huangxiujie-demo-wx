@@ -10,6 +10,7 @@
 	font-size: 14px;
 	color: #ccc;
 	border-radius: 5px;
+	text-align: center;
 }
 
 .placeholder-class {

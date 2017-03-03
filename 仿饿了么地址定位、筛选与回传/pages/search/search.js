@@ -40,7 +40,6 @@ Page({
     keywordTyping: function (e) {
         // 键盘不断录入绑定取值
         var keyword = e.detail.value;
-        console.log('keyword' + keyword);
         // 向腾讯地图接口发送请求
         qqmapsdk.getSuggestion({
             keyword: keyword,

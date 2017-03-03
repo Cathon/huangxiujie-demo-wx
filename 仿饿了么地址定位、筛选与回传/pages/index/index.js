@@ -19,9 +19,6 @@ Page({
         that = this;
         // 注册通知
         WxNotificationCenter.addNotification("addressSelectedNotification",that.getAddress,that)
-        var qqmapsdk = new QQMapWX({
-            key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
-        });
     },
     navigateToSearch: function () {
         wx.navigateTo({
