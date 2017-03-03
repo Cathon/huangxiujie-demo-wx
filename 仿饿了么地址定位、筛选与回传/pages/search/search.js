@@ -66,5 +66,11 @@ Page({
         WxNotificationCenter.postNotificationName("addressSelectedNotification", title);
         wx.navigateBack();
 
+    },
+    geoTapped: function () {
+        var title = that.data.address;
+        WxNotificationCenter.postNotificationName("addressSelectedNotification", title);
+        wx.navigateBack();
+        
     }
 })

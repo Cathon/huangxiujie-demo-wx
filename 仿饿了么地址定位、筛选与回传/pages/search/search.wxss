@@ -37,6 +37,7 @@
 
 .current text {
 	font-size: 14px;
+	width: 100%;
 }
 
 .current image {

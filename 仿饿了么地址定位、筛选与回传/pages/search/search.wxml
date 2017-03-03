@@ -3,7 +3,7 @@
 </view>
 <view class="header">当前地址</view>
 <view class="current">
-	<text>{{address}}</text>
+	<text bindtap="geoTapped">{{address}}</text>
 	<image src="../../images/geo.png" />
 </view>
 <view class="header">搜索地址</view>
