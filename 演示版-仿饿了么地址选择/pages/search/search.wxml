@@ -1,0 +1,17 @@
+<!-- 搜索框 -->
+<view class="searcher">
+	<input placeholder="请输入地址" bindinput="addressBindInput" />
+</view>
+<!-- 当前地址 -->
+<view class="header">
+	<view class="section">当前地址</view>
+	<text class="current">{{currentAddress}}</text>
+</view>
+<!-- 建议地址 -->
+<view class="header">
+	<view class="section">建议地址</view>
+	<view wx:for="{{result}}" bindtap="addressBindTap" class="item" wx:key="" data-address="{{item.title}}">
+		<text class="title">{{item.title}}</text>
+		<text class="address">{{item.address}}</text>
+	</view>
+</view>

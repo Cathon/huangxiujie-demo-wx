@@ -1,0 +1,17 @@
+view {
+	background: #009cf9;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+image {
+	width: 30px;
+	height: 30px;
+}
+
+text {
+	width: 100%;
+	font-size: 18px;
+	color: white;
+}

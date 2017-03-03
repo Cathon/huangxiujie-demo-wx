@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#009cf9",
+    "navigationBarTitleText": "仿饿么地址选择",
+    "navigationBarTextStyle":"white"
+  }
+}
