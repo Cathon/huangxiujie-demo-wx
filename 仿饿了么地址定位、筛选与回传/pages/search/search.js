@@ -17,25 +17,7 @@ Page({
         qqmapsdk = new QQMapWX({
             key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
         });
-        // 调用接口
-        qqmapsdk.reverseGeocoder({
-            poi_options: 'policy=2',
-            get_poi: 1,
-            success: function(res) {
-            // 渲染给页面
-                that.setData({
-                    address: res.result.formatted_addresses.recommend,
-                    result: res.result.pois,
-                    city: res.result.address_component.city
-                });
-            },
-            fail: function(res) {
-        //         console.log(res);
-            },
-            complete: function(res) {
-        //         console.log(res);
-            }
-        });
+        that.reloadCurrent();
     },
     keywordTyping: function (e) {
         // 键盘不断录入绑定取值
@@ -71,5 +53,29 @@ Page({
         WxNotificationCenter.postNotificationName("addressSelectedNotification", title);
         wx.navigateBack();
         
+    },
+    reloadCurrent: function () {
+        that.setData({
+                    address: '正在定位中...',
+        });
+        // 调用接口
+        qqmapsdk.reverseGeocoder({
+            poi_options: 'policy=2',
+            get_poi: 1,
+            success: function(res) {
+            // 渲染给页面
+                that.setData({
+                    address: res.result.formatted_addresses.recommend,
+                    result: res.result.pois,
+                    city: res.result.address_component.city
+                });
+            },
+            fail: function(res) {
+        //         console.log(res);
+            },
+            complete: function(res) {
+        //         console.log(res);
+            }
+        });
     }
 })
