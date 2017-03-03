@@ -8,13 +8,12 @@
  * @author 黄秀杰
  */
 
-var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
 var WxNotificationCenter = require('../../utils/WxNotificationCenter.js');
 var that;
 
 Page({
     data: {
-        address: '正在请求地址...'
+        address: '选择一个地理地址'
     },
     onLoad: function () {
         that = this;
@@ -22,24 +21,6 @@ Page({
         WxNotificationCenter.addNotification("addressSelectedNotification",that.getAddress,that)
         var qqmapsdk = new QQMapWX({
             key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
-        });
-        // 调用接口
-        qqmapsdk.reverseGeocoder({
-            poi_options: 'policy=2',
-            get_poi: 1,
-            success: function(res) {
-                // console.log(JSON.stringify(res));
-                console.log(res);
-                that.setData({
-                    address: res.result.formatted_addresses.recommend
-                });
-            },
-            fail: function(res) {
-        //         console.log(res);
-            },
-            complete: function(res) {
-        //         console.log(res);
-            }
         });
     },
     navigateToSearch: function () {

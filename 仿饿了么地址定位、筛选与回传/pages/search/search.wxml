@@ -1,5 +1,5 @@
 <view class="searcher">
-	<input type="text" bindinput="keywordTyping" placeholder="搜索商家、商品名称" placeholder-class="placeholder-class" />
+	<input type="text" bindinput="keywordTyping" placeholder="请输入地址" placeholder-class="placeholder-class" />
 </view>
 <view class="header">当前地址</view>
 <view class="current">
