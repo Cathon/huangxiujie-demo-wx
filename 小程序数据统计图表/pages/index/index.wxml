@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view>
+	<view class="caption">近30天访问趋势</view>
+	<!-- 图例 -->
+	<view class="indicator-container">
+		<view class="indicator">
+			<view class="circle purple"></view><text>访问人数</text>
+		</view>
+		<view class="indicator">
+			<view class="circle orange"></view><text>新用户数</text>
+		</view>
+	</view>
+	<canvas canvas-id="line-canvas" id="line-canvas"></canvas>
+</view>

@@ -1,0 +1,51 @@
+/*标题栏*/
+.caption {
+	margin: 6px;
+	font-size: 16px;
+}
+
+/*图例容器*/
+.indicator-container {
+	display: flex;
+	flex-direction: row;
+}
+
+/*一个图例*/
+.indicator {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin: 10px 20px 10px 10px;
+	align-items: center;
+}
+
+/*圆点*/
+.indicator .circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+}
+
+/*紫色图例*/
+.purple {
+	background: #7587db;
+}
+
+/*橙色图例*/
+.orange {
+	background: #ffaa00;
+}
+
+/*文本*/
+.indicator text {
+	color: #bcbcbc;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+/*画布*/
+#line-canvas {
+	width: 375px;
+	height: 200px;
+	background: #f8f8f8;
+}
