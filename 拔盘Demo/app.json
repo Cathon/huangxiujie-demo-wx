@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/donate/donate"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#48c23d",
+    "navigationBarTitleText": "拔盘Demo——黄秀杰",
+    "navigationBarTextStyle":"white"
+  }
+}
