@@ -115,6 +115,5 @@ Page({
 			value: value
 		});
 		// console.log(deltaX)
-	},
-	catch
+	}
 });
