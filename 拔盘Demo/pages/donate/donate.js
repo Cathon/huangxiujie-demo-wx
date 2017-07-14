@@ -104,7 +104,7 @@ Page({
 	bindscroll: function (e) {
 		// deltaX 水平位置偏移位，每次滑动一次触发一次，所以需要记录从第一次触发滑动起，一共滑动了多少距离
 		deltaX += e.detail.deltaX;
-		var value = (- deltaX / 100 + minValue).toFixed(1)
+		var value = (- deltaX / 100 + minValue).toFixed(2)
 		if (value < 0.01) {
 			value = 0;
 		} else if (value >= 200.0) {
