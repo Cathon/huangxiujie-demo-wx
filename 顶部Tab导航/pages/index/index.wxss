@@ -34,7 +34,7 @@ page,
 }
 
 .weui-navbar__item.weui-bar__item_on {
-    color: #fb8624
+    color: #1aad19
 }
 
 .weui-navbar__slider {
@@ -44,7 +44,7 @@ page,
     bottom: 0;
     width: 6em;
     height: 3px;
-    background-color: #fb8624;
+    background-color: #1aad19;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;
