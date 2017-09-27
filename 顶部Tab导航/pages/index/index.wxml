@@ -10,7 +10,7 @@
         <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
       </view>
       <view class="weui-tab__panel">
-        <swiper current="{{activeIndex}}">
+        <swiper current="{{activeIndex}}" bindchange="currentChanged">
           <swiper-item wx:for="[0, 1, 2, 3]">
             <view class="weui-tab__content">选项{{index}}的内容</view>
           </swiper-item>

@@ -23,5 +23,11 @@ Page({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
+  },
+  currentChanged: function (e) {
+    this.setData({
+      sliderOffset: getApp().screenWidth / this.data.tabs.length * e.detail.current,
+      activeIndex: e.detail.current
+    });
   }
 })
