@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<swiper>
+  <swiper-item class="thumb" wx:for="{{imagesTarget}}" wx:key="" wx:for-item="section" wx:for-index="sectionIndex">
+    <view wx:for="{{section}}" wx:for-index="idx" wx:for-item="image" class="image-container" wx:key="" data-current="{{sectionIndex * 3 + idx}}">
+      <image src="{{image}}" mode="aspectFill" />
+    </view>
+  </swiper-item>
+</swiper>
