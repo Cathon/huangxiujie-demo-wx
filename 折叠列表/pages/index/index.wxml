@@ -1,0 +1,6 @@
+<view class="listview" wx:for="{{categories}}" wx:for-item="parent" wx:key="">
+    <!-- parent -->
+    <view bindtap="parentTap" data-index="{{index}}" class="parent">{{parent.title}}</view>
+    <!-- child list -->
+    <view hidden="{{parent.hidden}}" wx:for="{{parent.child}}" wx:for-item="child" wx:key="">{{child.title}}</view>
+</view>
