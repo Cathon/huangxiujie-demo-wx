@@ -11,7 +11,7 @@ Page({
         let index = e.currentTarget.dataset.index;
         // 点中哪行父类，显示其子列表
         let categories = this.data.categories;
-        // 如果想实现手风琴效果，打开forEach以下代码
+        // 如果不想要手风琴效果，关闭forEach以下代码
         categories.forEach(item => {
             item.hidden = true;
         });
