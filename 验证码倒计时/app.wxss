@@ -1,0 +1,63 @@
+page {
+	font-size: 16px;
+}
+
+/*提交按钮*/
+form button {
+	margin: 30px;
+	background: #09f;
+	color: white;
+}
+
+/*文本框容器*/
+.input-container {
+	margin: 20px 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 3px;
+}
+
+/*文本框本身*/
+.input-container input {
+	color: #999;
+	flex: 1;
+	height: 40px;
+}
+
+/*占位符样式*/
+.input-placeholder {
+	color: #999;
+}
+
+/*清空按钮*/
+.input-container image {
+	width: 22px;
+	height: 22px;
+}
+
+.forgot {
+	margin: 0 30px 40px 30px;
+	text-align: right;
+	font-size: 14px;
+	color: #ccc;
+}
+
+/*获取验证码*/
+.captcha {
+	margin: 0 4px;
+	color: #fff;
+	font-size: 14px;
+}
+
+button[plain] {
+	color: #09f;
+	border: 0;
+}
+
+button[plain][disabled] {
+	color: #09f;
+	background: transparent;
+}

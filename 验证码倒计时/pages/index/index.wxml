@@ -1,0 +1,6 @@
+<form bindsubmit="regist">
+    <view class="input-container">
+        <input type="text" name="verifyCode" placeholder="验证码" value="{{verifyCode}}" />
+        <button class="captcha" bindtap="captcha" disabled="{{captchaDisabled}}" plain="true" disabled-class="disabled">{{captchaLabel}}</button>
+    </view>
+</form>
