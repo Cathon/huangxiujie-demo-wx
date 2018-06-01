@@ -1,4 +1,4 @@
-var length = 10;
+var length = 5;
 
 function countdown(that) {
     console.log('count down');
