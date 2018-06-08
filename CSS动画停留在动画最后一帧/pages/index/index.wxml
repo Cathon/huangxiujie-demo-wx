@@ -1,0 +1,3 @@
+<view class="{{fade}} init"></view>
+<button type="primary" bindtap="fadeInMe">fadeIn</button>
+<button type="primary" bindtap="fadeOutMe">fadeOut</button>

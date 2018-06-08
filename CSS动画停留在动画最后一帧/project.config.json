@@ -1,0 +1,32 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "touristappid",
+	"projectname": "CSS%E5%8A%A8%E7%94%BB%E5%81%9C%E7%95%99%E5%9C%A8%E5%8A%A8%E7%94%BB%E6%9C%80%E5%90%8E%E4%B8%80%E5%B8%A7",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
+}
