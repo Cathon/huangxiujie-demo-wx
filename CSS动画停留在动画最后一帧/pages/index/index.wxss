@@ -1,9 +1,3 @@
-view {
-  width: 100%;
-  height: 300px;
-  background-color: darksalmon;
-}
-
 .fadeOut {
   animation-name: fadeOutAnimation;
   animation-duration: 1s;
@@ -17,4 +11,10 @@ view {
   to {
     opacity: 0;
   }
+}
+
+view {
+  width: 100%;
+  height: 300px;
+  background-color: darksalmon;
 }
