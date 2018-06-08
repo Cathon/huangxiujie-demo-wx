@@ -4,17 +4,17 @@ view {
   background-color: darksalmon;
 }
 
-@keyframes fadeOut {
-  0% {
-        opacity: 1
-	}
-	to {
-        opacity: 0
-	}
+.fadeOut {
+  animation-name: fadeOutAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.fadeOut {
-    animation-name: fadeOut;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
 }
